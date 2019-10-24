@@ -29,7 +29,7 @@ Hu2XY1TvQhe6JZmBuUWT1FSQ0lIkrAo3QIp0DPS6Pnee87puoM (API secret key)
 //requiring routes
 var indexRoutes      = require("./routes/index")
 
-var url = "mongodb://localhost:27017/mydb"
+var url = "mongodb+srv://akashtripathi14:akashtripathi@cluster0-fws3a.mongodb.net/test?retryWrites=true&w=majority"
 /*
 mongoose.connect("url", function (err, db) {
     if (err) {
@@ -76,8 +76,8 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new TwitterStrategy({
     consumerKey: TWITTER_CONSUMER_KEY,
     consumerSecret: TWITTER_CONSUMER_SECRET,
-    //callbackURL: "https://youelect.herokuapp.com/auth/twitter/callback"
-	callbackURL: "https://localhost:3000/auth/twitter/callback"
+    callbackURL: "https://youelect.herokuapp.com/auth/twitter/callback"
+	//callbackURL: "https://localhost:3000/auth/twitter/callback"
     },
     function(token, tokenSecret, profile, done) {
         User.findOne({'twitter.id': profile.id }, function (err, user) {
