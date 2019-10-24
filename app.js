@@ -76,7 +76,7 @@ passport.deserializeUser(User.deserializeUser());
 passport.use(new TwitterStrategy({
     consumerKey: TWITTER_CONSUMER_KEY,
     consumerSecret: TWITTER_CONSUMER_SECRET,
-    callbackURL: "https://youelect.herokuapp.com/auth/twitter/callback"
+    callbackURL: "https://youelect2019.herokuapp.com/auth/twitter/callback"
 	//callbackURL: "https://localhost:3000/auth/twitter/callback"
     },
     function(token, tokenSecret, profile, done) {
